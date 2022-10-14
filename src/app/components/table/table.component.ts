@@ -19,4 +19,26 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onclick(reaction: string){
+    this.choosereaction()[reaction]()
+  }
+  create(){
+    console.log('create')
+  }
+  edit(){
+console.log('edit')
+  }
+  remove(){
+console.log('remove')
+  }
+
+
+  choosereaction(): any {
+    return {
+      create: this.create,
+      edit: this.edit,
+      remove: this.remove,
+    }
+  }
+
 }

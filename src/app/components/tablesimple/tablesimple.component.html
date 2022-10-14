@@ -1,0 +1,44 @@
+<button (click)="onclick('create')" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+</button>
+
+
+
+<table class="table">
+  <thead>
+    <th *ngFor="let column of displayedColumns">
+
+      <tr>
+        <td>{{column}}</td>
+      </tr>
+    </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cell of students" >
+      <ng-container *ngFor="let column of displayedColumns">
+        <td>
+          {{cell[column]}}
+        </td>
+
+      </ng-container>
+      <td>
+        <button (click)="onclick('edit')" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+        </button>
+
+      </td>
+      <td>
+        <button (click)="onclick('remove')" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+        </button>
+      </td>
+    </tr>
+
+
+
+
+
+
+  </tbody>
+
+</table>

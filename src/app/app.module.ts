@@ -8,11 +8,13 @@ import {MatTableModule} from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { TablesimpleComponent } from './components/tablesimple/tablesimple.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
+    TablesimpleComponent,
 
   ],
   imports: [

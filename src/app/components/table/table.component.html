@@ -1,3 +1,11 @@
+<button (click)="onclick('create')" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+  <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+</button>
+
+
+
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
 
 
@@ -5,6 +13,7 @@
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
+
   <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> id. </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
@@ -37,7 +46,7 @@
     <th mat-header-cell *matHeaderCellDef> Editar </th>
     <td mat-cell *matCellDef="let element">
 
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+      <button (click)="onclick('edit')" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
       </button>
 
@@ -48,7 +57,7 @@
     <th mat-header-cell *matHeaderCellDef> Excluir </th>
     <td mat-cell *matCellDef="let element">
 
-      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+      <button (click)="onclick('remove')" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
       </button>
 
