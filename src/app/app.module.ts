@@ -1,3 +1,4 @@
+import { TranslateHeaderTablePipe } from './pipe/headertable/headertable.pipe';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -15,7 +16,7 @@ import { TablesimpleComponent } from './components/tablesimple/tablesimple.compo
     AppComponent,
     TableComponent,
     TablesimpleComponent,
-
+    TranslateHeaderTablePipe,
   ],
   imports: [
     BrowserModule,
