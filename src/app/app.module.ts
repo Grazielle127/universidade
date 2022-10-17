@@ -10,13 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { TablesimpleComponent } from './components/tablesimple/tablesimple.component';
+import { DialogStudentsComponent } from './components/dialog-students/dialog-students.component';
+import { FormsStudentsComponent } from './components/forms-students/forms-students.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
+  entryComponents:[DialogStudentsComponent],
+
   declarations: [
     AppComponent,
     TableComponent,
     TablesimpleComponent,
     TranslateHeaderTablePipe,
+    FormsStudentsComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +31,7 @@ import { TablesimpleComponent } from './components/tablesimple/tablesimple.compo
     MatTableModule,
     MatIconModule,
     MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

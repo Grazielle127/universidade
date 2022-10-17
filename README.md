@@ -6,6 +6,6 @@
 * [x] Criacao da tabela de estudantes
 * [x] Criacao da tabela com ngFor
 * [x] Criacao do Pipe
-
+* [x] função delete do aluno
 
 
