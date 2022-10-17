@@ -7,5 +7,6 @@
 * [x] Criacao da tabela com ngFor
 * [x] Criacao do Pipe
 * [x] função delete do aluno
-
+* [X] função Criar aluno
+* [X]função Atualizar aluno
 

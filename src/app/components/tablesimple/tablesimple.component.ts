@@ -63,31 +63,51 @@ chamada do metodo digitar
     this.choosereaction()[reaction](student);
   }
   create() {
-    console.log('create');
-    this.dialog.open(DialogStudentsComponent);
+
+    this.dialog
+      .open(DialogStudentsComponent)
+      .afterClosed()
+      .subscribe( (resposta) =>{
+        var lastId = this.students[this.students.length-1].id
+        lastId++
+      this.students.push({id:lastId, ...resposta});
+      });
   }
   edit(student: Student) {
-    console.log('edit');
-  }
-  remove(student: Student) {
-    console.log('remove');
-    console.log(student);
-    const index =  this.getIndex(this.students, student.id);
-    if(index >= 0){
-    this.students.splice( index, 1)
-    }
-    console.log(index)
+    this.dialog.open(DialogStudentsComponent, {
+      data: student
+
+    }).afterClosed()
+    .subscribe( (resposta) =>{
+      const index = this.getIndex(this.students, resposta.id)
+      if (index >= 0) {
+
+
+       this.students[index] = resposta
+      }
+
+
+    });
 
   }
-  filtro(students: Student[]) {
-    return students.filter(function(student) {
-      return student.id == 1;
+  remove(student: Student) {
+
+
+    const index = this.getIndex(this.students, student.id);
+    if (index >= 0) {
+      this.students.splice(index, 1);
+    }
+
+  }
+  filtro(students: Student[], id: number) {
+    return students.filter(function (student) {
+      return student.id == id;
     });
   }
-  getIndex(students: Student[], id: number){
-    return students.findIndex(function(student) {
-      return student.id== id;
-    })
+  getIndex(students: Student[], id: number) {
+    return students.findIndex(function (student) {
+      return student.id == id;
+    });
   }
 
   choosereaction(): any {

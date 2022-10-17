@@ -13,16 +13,24 @@ import { TablesimpleComponent } from './components/tablesimple/tablesimple.compo
 import { DialogStudentsComponent } from './components/dialog-students/dialog-students.component';
 import { FormsStudentsComponent } from './components/forms-students/forms-students.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   entryComponents:[DialogStudentsComponent],
 
+
+
   declarations: [
+
     AppComponent,
     TableComponent,
     TablesimpleComponent,
     TranslateHeaderTablePipe,
     FormsStudentsComponent,
+    DialogStudentsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatTableModule,
     MatIconModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,28 @@
-<p>forms-students works!</p>
+
+<form class="salvar">
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input [ngModelOptions]="{standalone: true}" [(ngModel)]="student.name" type="text"matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Idade</mat-label>
+    <input [ngModelOptions]="{standalone: true}"  [(ngModel)]="student.age" type="number"matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Curso</mat-label>
+    <input [ngModelOptions]="{standalone: true}"  [(ngModel)]="student.course"type="text"matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Semestre</mat-label>
+    <input [ngModelOptions]="{standalone: true}" [(ngModel)]="student.semester" type="text"matInput>
+  </mat-form-field>
+
+
+  <button (click)="salvar()" mat-button> {{!isupdate? 'salvar': 'atualizar'}}
+    <mat-icon fontIcon="save"></mat-icon>
+  </button>
+
+</form>
