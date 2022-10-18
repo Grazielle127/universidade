@@ -1,4 +1,38 @@
+.header{
+  display: flex;
+
+}
+ h1{
+  padding-left: 30%;
+}
+
 .table
 {
   width: 100%;
+}
+button{
+  background-color: #2c3333;
+  color: white;
+
+}
+#add{
+ margin: 10px;
+
+}
+#ag{
+  background-color:#395B64;
+  color:white;
+  border-radius: 100px;
+  font-size: 2rem;
+
+}
+
+tbody{
+  background-color: #A5C9CA;
+
+}
+
+td
+{
+  padding-left: 10px;
 }

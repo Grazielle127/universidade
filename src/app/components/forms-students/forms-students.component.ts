@@ -9,7 +9,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class FormsStudentsComponent implements OnInit {
   @Output() send = new EventEmitter();
   @Input() receberEstudante!: Student
-  student = { name: '', age:0, course: '', semester: '', id: 0 };
+  student = { name: '', age:0, course: '', semester: '', id: 11 };
   isupdate!: boolean
   constructor() {}
 
