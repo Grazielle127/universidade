@@ -21,7 +21,11 @@
   </mat-form-field>
 
 
-  <button (click)="salvar()" mat-button> {{!isupdate? 'salvar': 'atualizar'}}
+  <button  *ngIf="!isupdate" (click)="salvar()" mat-button> salvar
+    <mat-icon fontIcon="save"></mat-icon>
+  </button>
+
+  <button *ngIf="isupdate" (click)="salvar()" mat-button> atualizar
     <mat-icon fontIcon="save"></mat-icon>
   </button>
 
